@@ -7,6 +7,10 @@
     legend Questions
     = f.fields_for :questions do |q|
       = q.text_field :content
+      
+      b choices
+      = q.fields_for :choices do |c|
+        = c.text_field :caption
   
   = f.form_group do
     = f.submit class: 'btn btn-primary'
