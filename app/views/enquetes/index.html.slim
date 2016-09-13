@@ -1,0 +1,21 @@
+h1 Listing enquetes
+
+table.table
+  thead
+    tr
+      th Name
+      th
+
+  tbody
+    - @enquetes.each do |enquete|
+      tr
+        td = enquete.name
+        td
+          .btn-group.btn-group-sm
+            = link_to 'Show', enquete, class: 'btn btn-default'
+            = link_to 'Edit', edit_enquete_path(enquete), class: 'btn btn-default'
+            = link_to 'Destroy', enquete, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-danger'
+
+br
+
+= link_to 'New Enquete', new_enquete_path, class: 'btn btn-info'

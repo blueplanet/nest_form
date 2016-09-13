@@ -1,0 +1,6 @@
+= bootstrap_form_for @enquete do |f|
+  = f.error_summary
+
+  = f.text_field :name
+  = f.form_group do
+    = f.submit class: 'btn btn-primary'
