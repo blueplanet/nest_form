@@ -2,5 +2,11 @@
   = f.error_summary
 
   = f.text_field :name
+  
+  fieldset
+    legend Questions
+    = f.fields_for :questions do |q|
+      = q.text_field :content
+  
   = f.form_group do
     = f.submit class: 'btn btn-primary'
